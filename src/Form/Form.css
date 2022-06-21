@@ -1,0 +1,53 @@
+
+input,
+button {
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+*:focus:not([type="radio"]) {
+    outline: 2px solid goldenrod;
+    outline-offset: 2px;
+  }
+
+.textarea-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.textarea-label{
+    align-self: flex-start;
+    font-weight: bold;
+}
+
+.description{
+    width: 100%;
+    height: 200px;
+    background-color: #E3E4E6;
+    padding: 4px;
+}
+
+.count-textarea-inputs{
+    align-self: flex-end;
+}
+
+.errorMessage{
+    color: red;
+    align-self: flex-start;
+    font-weight: bold;
+}
+
+
+.confirmation-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+#confirmation{
+    margin-right: 6px;
+}
