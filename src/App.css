@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  color: #E3E4E6;
+  background-color: #20262E;
+  line-height: 1.5;
+}
+
 .App {
   text-align: center;
+  margin: 24px auto;
+  width: min(92vw, 800px);
 }
