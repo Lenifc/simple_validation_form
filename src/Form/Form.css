@@ -9,13 +9,18 @@ button {
 *:focus:not([type="radio"]) {
     outline: 2px solid goldenrod;
     outline-offset: 2px;
-  }
+}
+
+.gap-sections{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 .textarea-section{
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 20px auto;
 }
 
 .textarea-label{
@@ -28,6 +33,7 @@ button {
     height: 200px;
     background-color: #E3E4E6;
     padding: 4px;
+    border-radius: 6px;
 }
 
 .count-textarea-inputs{
@@ -50,4 +56,31 @@ button {
 
 #confirmation{
     margin-right: 6px;
+    cursor: pointer;
+}
+
+.select-input-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px
+}
+
+#vat{
+    padding: 10px 8px;
+    border: none;
+    border-radius: 6px;
+}
+
+
+
+
+
+
+.buttons-section{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    margin: 24px 0;
 }
