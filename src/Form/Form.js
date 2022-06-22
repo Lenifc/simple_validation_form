@@ -140,12 +140,15 @@ export default function Form(){
 
     //  check for errors in description every user character input
     useEffect(() => {
-        setTextAreaError(textareaInputs?.length === 0 ? errMsg_textRequired : textareaInputs?.length >= 255 ? errMsg_tooManyCharacters : false)
+        setTextAreaError(textareaInputs?.length === 0 ? errMsg_textRequired : 
+            textareaInputs?.length >= 255 ? errMsg_tooManyCharacters : false)
     }, [textareaInputs])
     
     useEffect(() => {
         // radioButtonSelection === '' prevents of showing error message immediately after form was loaded
-        setRadioButtonError(radioButtonSelection === '' || radioButtonSelection === 'yes' || radioButtonSelection === 'no' ? false : errMsg_textRequired)
+        setRadioButtonError(radioButtonSelection === '' || 
+                            radioButtonSelection === 'yes' || 
+                            radioButtonSelection === 'no' ? false : errMsg_textRequired)
     }, [radioButtonSelection])
 
     //  any select option must be choosen to avoid error
@@ -168,8 +171,10 @@ export default function Form(){
 
         <div className="textarea-section">
             <label className="textarea-label" htmlFor="description"><h2>Description</h2></label>
-            <textarea id="description" className="description" onChange={(e) => checkCharacters(e.target.value)} value={textareaInputs}>{ textareaInputs }</textarea>
-            <div className="count-textarea-inputs">Available characters: { (availableInputCharacters - textareaInputs?.length < 0) ? 0 : availableInputCharacters - textareaInputs?.length}</div>
+            <textarea id="description" className="description" value={textareaInputs} 
+                        onChange={(e) => checkCharacters(e.target.value)} >{ textareaInputs }</textarea>
+            <div className="count-textarea-inputs">Available characters: 
+                { (availableInputCharacters - textareaInputs?.length < 0) ? 0 : availableInputCharacters - textareaInputs?.length}</div>
             {textareaError && <div className="textarea-errors errMsg">{ textareaError }</div>}
         </div>
 
@@ -177,11 +182,13 @@ export default function Form(){
         <div className="confirmation-section">
             <label className="confirmation-label" htmlFor="confirmation"><h2>Send confirmation:</h2></label>
             <div>
-                <input type="radio" id="confirmation" name="confirmation" value='yes' checked={radioButtonSelection === 'yes' } onChange={(e) => setRadioButtonSelection(e.target.value)} />
+                <input type="radio" id="confirmation" name="confirmation" value='yes' checked={radioButtonSelection === 'yes' } 
+                        onChange={(e) => setRadioButtonSelection(e.target.value)} />
                 <span>YES</span>
             </div>
             <div>
-                <input type="radio" id="confirmation" name="confirmation" value='no' checked={radioButtonSelection === 'no' } onChange={(e) => setRadioButtonSelection(e.target.value)} />
+                <input type="radio" id="confirmation" name="confirmation" value='no' checked={radioButtonSelection === 'no' } 
+                        onChange={(e) => setRadioButtonSelection(e.target.value)} />
                 <span>NO</span>
             </div>
             {radioButtonError && <div className="radiobutton-errors errMsg">{ radioButtonError }</div>}
