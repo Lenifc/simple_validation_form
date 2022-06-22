@@ -1,3 +1,10 @@
+## Live version: https://lenifc.github.io/simple_validation_form/
+
+- description cannot be empty and more than 255 characters
+- all inputs are required to fill before submit
+- gross(brutto) price is calculated from VAT tax and net price
+- ### submit response is RANDOM 50%/50%, failed will throw network error and success will show green box
+- added simple dark CSS styling 
 
 
 ## Available Scripts
